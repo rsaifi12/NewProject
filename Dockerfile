@@ -5,7 +5,7 @@ FROM public.ecr.aws/docker/library/python:3.8
 # Rest of your Dockerfile instructions
 WORKDIR /app
 
-COPY requirements.txt
+COPY requirements.txt .
 
 RUN pip3 install -r requirements.txt
 
