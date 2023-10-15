@@ -1,9 +1,14 @@
 #FROM python:3.8
-#FROM 786678469955.dkr.ecr.us-east-1.amazonaws.com/app:my-python-app
-FROM 786678469955.dkr.ecr.us-east-1.amazonaws.com/lambda-test-harness:latest
+#FROM 786678469955.dkr.ecr.us-east-1.amazonaws.com/lambda-test-harness:latest
 #FROM public.ecr.aws/lambda/python:3.8
+FROM public.ecr.aws/docker/library/python:3.8
 # Rest of your Dockerfile instructions
+WORKDIR /app
 
-COPY app.py /app.py
+COPY requirements.txt
 
-CMD ["python", "/app.py"]
+RUN pip3 install -r requirements.txt
+
+COPY app.py .
+
+CMD ["/app/app/app.handler"]
