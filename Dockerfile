@@ -11,4 +11,4 @@ RUN pip3 install -r requirements.txt
 
 COPY app.py .
 
-CMD ["/app/app/app.handler"]
+CMD ["/app/app.handler"]
