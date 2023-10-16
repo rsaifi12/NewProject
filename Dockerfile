@@ -13,5 +13,6 @@ COPY app.py .
 
 # EXPOSE 80
 
-CMD ["app.lambda_handler"]
+CMD ["python", "-m", "app"]
+
 
