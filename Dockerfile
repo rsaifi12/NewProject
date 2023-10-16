@@ -13,4 +13,4 @@ COPY app.py .
 
 # EXPOSE 80
 
-CMD ["/app/app.handler"]
+CMD ["app.handler"]
