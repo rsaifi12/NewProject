@@ -9,10 +9,10 @@ COPY requirements.txt .
 
 RUN pip3 install -r requirements.txt
 
-COPY app.py .
+COPY app.py /app
 
 # EXPOSE 80
 
-CMD ["python", "-m", "app"]
+CMD ["python", "app.py"]
 
 
